@@ -1,0 +1,22 @@
+{
+  "presets": ["next/babel", "patronum/babel-preset"],
+  "plugins": [
+    [
+      "effector/babel-plugin",
+      {
+        "factories": ["patronum"],
+        "addLoc": true,
+        "reactSsr": true
+      }
+    ],
+    [
+      "effector/babel-plugin",
+      {
+        "importName": "@/shared/lib/effector-react-form",
+        "storeCreators": ["createForm"],
+        "noDefaults": true
+      },
+      "createForm"
+    ]
+  ]
+}
